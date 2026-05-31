@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Campus 112 — Un écosystème d'innovation à Reims. 65 hectares pour vivre, travailler, créer, accueillir et expérimenter.">
+  <title>Campus 112 — Écosystème d'innovation à Reims</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="site-nav" role="navigation" aria-label="Navigation principale">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Campus 112 — Accueil">
+      <img src="imgs/Campus 112-logos/Group 30.svg" alt="Campus 112" width="140" height="48">
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="etudiants.html">Étudiants</a></li>
+      <li><a href="professionnels.html">Professionnels</a></li>
+      <li><a href="evenementiel.html">Événementiel</a></li>
+      <li><a href="culture.html">Culture</a></li>
+      <li><a href="living-lab.html">Living Lab</a></li>
+      <li><a href="#contact" class="nav-cta">Nous contacter</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <img
+      src="imgs/Microville-112-Photos-Aeriennes-Web30 (1).jpg"
+      alt="Vue aérienne du Campus 112"
+      width="1600" height="900"
+      fetchpriority="high"
+    >
+  </div>
+  <div class="hero-content container">
+    <p class="hero-eyebrow">Un écosystème d'innovation — À Reims, à 15 min du centre</p>
+    <h1 class="hero-title">La capitale<br>du vivant<br>se construit ici.</h1>
+    <p class="hero-sub">65 hectares paysagers pour vivre, travailler, créer, accueillir et expérimenter.</p>
+    <div class="hero-actions">
+      <a href="#offres" class="btn btn-primary">Découvrir les offres</a>
+      <a href="#contact" class="btn btn-secondary">Nous contacter</a>
+    </div>
+  </div>
+</header>
+
+<!-- Projet -->
+<section>
+  <div class="container">
+    <div class="split">
+      <div>
+        <p class="section-tag">Le projet</p>
+        <h2 class="section-title">L'ancienne base<br>aérienne 112</h2>
+        <div class="accent-bar"></div>
+        <p class="section-lead">L'ancienne Base aérienne 112 se transforme en campus multi-usages, écosystème de coopération et d'innovation aux portes de Reims.</p>
+        <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.7; max-width: 52ch;">Campus 112 réunit logements étudiants, espaces professionnels, lieux événementiels, projets culturels et Living Lab grandeur nature. Un territoire singulier, en développement actif, qui construit une nouvelle façon d'habiter, travailler et innover.</p>
+      </div>
+      <div class="split-img">
+        <img
+          src="imgs/Vue d'ensemble (place d'armes) 2_light.jpg"
+          alt="Vue d'ensemble du Campus 112"
+          width="800" height="600"
+          loading="lazy"
+        >
+      </div>
+    </div>
+    <div class="stats-row" style="margin-top: 3.5rem;">
+      <div class="stat-item">
+        <div class="stat-num">65</div>
+        <div class="stat-label">hectares paysagers</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5</div>
+        <div class="stat-label">offres complémentaires</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">15 min</div>
+        <div class="stat-label">du centre de Reims</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">17</div>
+        <div class="stat-label">comités Living Lab</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Roue des fonctions urbaines -->
+<section class="wheel-section">
+  <div class="container">
+    <div class="wheel-layout">
+      <div>
+        <p class="section-tag">Un territoire complet</p>
+        <h2 class="section-title">6 fonctions<br>urbaines.<br>11 filières<br>écosystème.</h2>
+        <div class="accent-bar"></div>
+        <p class="section-lead">Campus 112 est conçu comme un territoire de proximité climatiquement neutre et connecté : habiter, travailler, s'approvisionner, apprendre, s'épanouir, se soigner.</p>
+        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7; max-width: 48ch;">Adossé à 11 infrastructures éco-responsables — énergie, eau, biodiversité, numérique, mobilités, financement — le campus incarne un nouveau modèle de ville régénérative.</p>
+      </div>
+      <div class="wheel-wrap">
+        <img
+          class="wheel-img"
+          src="imgs/Schema Boussole d'un Territoire régénératif (17 filières).png"
+          alt="Schéma des 6 fonctions urbaines et 11 infrastructures éco-responsables du Campus 112"
+          width="480" height="480"
+          loading="lazy"
+          title="Survolez pour mettre en pause"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Offres -->
+<section id="offres" class="bg-light">
+  <div class="container">
+    <p class="section-tag">Ce qu'on y fait</p>
+    <h2 class="section-title">5 offres,<br>un écosystème</h2>
+    <p class="section-lead">Chaque offre est conçue pour fonctionner de façon autonome — et s'enrichir du collectif. À Campus 112, les usages se croisent et se renforcent.</p>
+    <div class="offers-grid" role="list">
+
+      <article class="offer-card card-etudiants" role="listitem">
+        <div class="offer-card-top"></div>
+        <div class="offer-card-body">
+          <p class="offer-card-cat">Habiter</p>
+          <h3 class="offer-card-title">Étudiants</h3>
+          <p class="offer-card-text">Des studios étudiants dans un environnement paysager, à 15 minutes du centre de Reims. Espaces partagés, coworking, parking.</p>
+          <a href="etudiants.html" class="offer-card-link">
+            Découvrir
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="offer-card card-pro" role="listitem">
+        <div class="offer-card-top"></div>
+        <div class="offer-card-body">
+          <p class="offer-card-cat">Travailler</p>
+          <h3 class="offer-card-title">Professionnels</h3>
+          <p class="offer-card-text">Bureaux, ateliers, espaces de stockage et locaux modulables. 15 000 m² disponibles pour entreprises, associations, startups et acteurs de l'ESS.</p>
+          <a href="professionnels.html" class="offer-card-link">
+            Découvrir
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="offer-card card-events" role="listitem">
+        <div class="offer-card-top"></div>
+        <div class="offer-card-body">
+          <p class="offer-card-cat">Accueillir</p>
+          <h3 class="offer-card-title">Événementiel</h3>
+          <p class="offer-card-text">Espaces intérieurs et extérieurs pour séminaires, tournages, répétitions, spectacles, cocktails et événements professionnels.</p>
+          <a href="evenementiel.html" class="offer-card-link">
+            Découvrir
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="offer-card card-culture" role="listitem">
+        <div class="offer-card-top"></div>
+        <div class="offer-card-body">
+          <p class="offer-card-cat">Créer</p>
+          <h3 class="offer-card-title">Culture</h3>
+          <p class="offer-card-text">Ateliers et résidences pour artistes, créatifs et projets culturels. Un cadre inspirant entre art, territoire et innovation.</p>
+          <a href="culture.html" class="offer-card-link">
+            Découvrir
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="offer-card card-lab" role="listitem">
+        <div class="offer-card-top"></div>
+        <div class="offer-card-body">
+          <p class="offer-card-cat">Expérimenter</p>
+          <h3 class="offer-card-title">Living Lab</h3>
+          <p class="offer-card-text">Un territoire d'expérimentation grandeur nature pour tester, prototyper et faire émerger des solutions liées à la ville et à l'économie du vivant.</p>
+          <a href="living-lab.html" class="offer-card-link">
+            Découvrir
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA + Contact -->
+<section id="contact" class="form-section">
+  <div class="container">
+    <p class="section-tag" style="color: rgba(255,255,255,0.6);">Contact</p>
+    <h2 class="section-title">Parlez-nous<br>de votre projet</h2>
+    <p style="color: rgba(255,255,255,0.8); max-width: 48ch; margin-bottom: 0.5rem;">Une question, un projet, une envie de s'installer ? Contactez Campus 112.</p>
+    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem;">
+      Ou appelez-nous : <a href="tel:+33757818183" style="color: white; font-weight: 500;">07 57 81 81 83</a>
+    </p>
+    <div class="contact-form">
+      <form action="#" method="post" novalidate>
+        <input type="hidden" name="offre" value="general">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nom-h">Nom</label>
+            <input type="text" id="nom-h" name="nom" autocomplete="family-name" required>
+          </div>
+          <div class="form-group">
+            <label for="prenom-h">Prénom</label>
+            <input type="text" id="prenom-h" name="prenom" autocomplete="given-name" required>
+          </div>
+          <div class="form-group">
+            <label for="structure-h">Structure</label>
+            <input type="text" id="structure-h" name="structure" autocomplete="organization">
+          </div>
+          <div class="form-group">
+            <label for="email-h">Email</label>
+            <input type="email" id="email-h" name="email" autocomplete="email" required>
+          </div>
+          <div class="form-group">
+            <label for="tel-h">Téléphone</label>
+            <input type="tel" id="tel-h" name="tel" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="demande-h">Type de demande</label>
+            <select id="demande-h" name="demande">
+              <option value="">Sélectionner…</option>
+              <option>Logement étudiant</option>
+              <option>Espace professionnel</option>
+              <option>Événementiel</option>
+              <option>Projet culturel</option>
+              <option>Living Lab</option>
+              <option>Information générale</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="message-h">Message</label>
+            <textarea id="message-h" name="message" placeholder="Décrivez votre projet ou votre besoin…"></textarea>
+          </div>
+        </div>
+        <div style="margin-top: 1.5rem;">
+          <button type="submit" class="btn btn-violet">Envoyer ma demande</button>
+        </div>
+        <p class="form-notice">Vos données sont utilisées uniquement pour traiter votre demande. Aucune adresse email n'est affichée sur ce site.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div>
+      <img src="imgs/Campus 112-logos/Group 30.svg" alt="Campus 112" class="footer-logo" width="140" height="48" loading="lazy">
+      <p class="footer-desc">Un écosystème d'innovation aux portes de Reims, sur l'ancienne Base aérienne 112. 65 hectares pour vivre, travailler, créer et expérimenter.</p>
+      <p class="footer-contact"><a href="https://www.campus112.org" rel="noopener">www.campus112.org</a></p>
+      <p class="footer-contact"><a href="tel:+33757818183">07 57 81 81 83</a></p>
+    </div>
+    <div>
+      <p class="footer-heading">Navigation</p>
+      <ul class="footer-nav-links" role="list">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="etudiants.html">Étudiants</a></li>
+        <li><a href="professionnels.html">Professionnels</a></li>
+        <li><a href="evenementiel.html">Événementiel</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="living-lab.html">Living Lab</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="eco-conception.html">Éco-conception</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Démarche Green IT</p>
+      <p class="footer-green">Ce site est conçu dans une logique de sobriété numérique : pages légères, images optimisées, scripts limités, navigation simple. Objectif : maintenir un score <a href="eco-conception.html">EcoIndex A</a>.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Campus 112</span>
+    <span>Conception graphique : <a href="https://etjaicrie.com" rel="noopener noreferrer" style="color: rgba(255,255,255,0.45);">etjaicrie.com</a></span>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

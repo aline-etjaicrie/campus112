@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+public/.*.m2JCD9
+public/.*.8PGFS3
+public/imgs/.*.7COsuz
+public/imgs/.*.WgZpx7
+public/imgs/.*.94jaO9
+public/imgs/.*.bqtGVn
+src/
+index.html
+main.js
+style.css
+postcss.config.js
+tailwind.config.js
+CAMPUS112.jpg

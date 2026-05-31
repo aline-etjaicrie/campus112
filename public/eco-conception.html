@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Démarche EcoIndex & Green IT — Campus 112 est conçu selon une logique de sobriété numérique. Objectif EcoIndex A.">
+  <title>Campus 112 — Éco-conception & Green IT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav" role="navigation" aria-label="Navigation principale">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Campus 112 — Accueil">
+      <img src="imgs/Campus 112-logos/Group 30.svg" alt="Campus 112" width="140" height="48">
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="etudiants.html">Étudiants</a></li>
+      <li><a href="professionnels.html">Professionnels</a></li>
+      <li><a href="evenementiel.html">Événementiel</a></li>
+      <li><a href="culture.html">Culture</a></li>
+      <li><a href="living-lab.html">Living Lab</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Nous contacter</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div style="padding-top: 64px;"></div>
+
+<section style="padding-top: clamp(3rem, 6vw, 5rem);">
+  <div class="container">
+    <p class="section-tag">Green IT</p>
+    <h1 class="section-title" style="font-size: clamp(2.2rem, 5vw, 3.8rem);">Démarche EcoIndex<br>& Green IT</h1>
+    <div class="accent-bar"></div>
+    <p class="section-lead">Le site Campus 112 est conçu selon une logique de sobriété numérique : limiter le poids des pages, réduire les scripts, optimiser les images, simplifier les parcours et privilégier des composants utiles, lisibles et durables.</p>
+
+    <dl class="score-box">
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem;">
+        <div>
+          <dt>Objectif EcoIndex</dt>
+          <dd>Grade A</dd>
+        </div>
+        <div>
+          <dt>Dernière vérification</dt>
+          <dd style="font-size: 1rem; opacity: 0.7;">À compléter</dd>
+        </div>
+        <div>
+          <dt>Score obtenu</dt>
+          <dd style="font-size: 1rem; opacity: 0.7;">À compléter</dd>
+        </div>
+        <div>
+          <dt>Poids moyen des pages</dt>
+          <dd style="font-size: 1rem; opacity: 0.7;">À compléter</dd>
+        </div>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section class="bg-light" style="padding-top: 3rem;">
+  <div class="container">
+    <p class="section-tag">Les principes</p>
+    <h2 class="section-title">Ce que nous<br>faisons concrètement</h2>
+    <div class="eco-grid">
+      <div class="eco-card">
+        <p class="eco-card-title">Design sobre</p>
+        <p>Pas d'animation lourde, pas de carrousel, pas de fonctionnalité gadget. Chaque élément justifie sa présence.</p>
+      </div>
+      <div class="eco-card">
+        <p class="eco-card-title">Pages légères</p>
+        <p>HTML statique, un seul fichier CSS partagé, un seul fichier JS minimal. Pas de framework lourd.</p>
+      </div>
+      <div class="eco-card">
+        <p class="eco-card-title">Images optimisées</p>
+        <p>Dimensions adaptées à l'usage, lazy loading sur toutes les images hors écran, formats modernes recommandés (WebP/AVIF).</p>
+      </div>
+      <div class="eco-card">
+        <p class="eco-card-title">Polices limitées</p>
+        <p>Deux familles typographiques (Barlow Condensed + Inter), deux graisses chacune, chargées depuis Google Fonts avec <code>display=swap</code>.</p>
+      </div>
+      <div class="eco-card">
+        <p class="eco-card-title">Scripts limités</p>
+        <p>Un seul fichier JS de quelques lignes (navigation mobile). Aucun tracker, aucune bibliothèque externe.</p>
+      </div>
+      <div class="eco-card">
+        <p class="eco-card-title">Navigation claire</p>
+        <p>Architecture simple : 7 pages, navigation directe, formulaires adaptés par offre. Pas de redirection inutile.</p>
+      </div>
+      <div class="eco-card">
+        <p class="eco-card-title">Icônes SVG inline</p>
+        <p>Pictogrammes intégrés en SVG inline. Aucune librairie d'icônes externe chargée.</p>
+      </div>
+      <div class="eco-card">
+        <p class="eco-card-title">Accessibilité</p>
+        <p>Balises sémantiques, attributs ARIA, contrastes conformes WCAG AA, navigation clavier fonctionnelle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="section-tag">Actions en cours</p>
+    <h2 class="section-title">Amélioration<br>continue</h2>
+    <p class="section-lead">L'éco-conception est un processus itératif. Voici les prochains points à traiter.</p>
+    <div class="features" style="max-width: 700px;">
+      <div class="feature-item"><div class="feature-bullet"></div><span>Convertir les images JPEG/PNG en WebP ou AVIF</span></div>
+      <div class="feature-item"><div class="feature-bullet"></div><span>Vérifier et documenter le score EcoIndex après déploiement</span></div>
+      <div class="feature-item"><div class="feature-bullet"></div><span>Documenter l'hébergement (localisation, énergie renouvelable)</span></div>
+      <div class="feature-item"><div class="feature-bullet"></div><span>Sous-setter les polices Google Fonts pour ne charger que les caractères utilisés</span></div>
+      <div class="feature-item"><div class="feature-bullet"></div><span>Ajouter un cache HTTP long sur les assets statiques</span></div>
+      <div class="feature-item"><div class="feature-bullet"></div><span>Mesurer le bilan carbone annuel du site</span></div>
+    </div>
+    <div style="margin-top: 3rem; padding: 2rem; background: var(--violet-light); border-radius: var(--radius); max-width: 700px;">
+      <p style="font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--violet); margin-bottom: 0.75rem;">Ressources</p>
+      <p style="font-size: 0.9rem; color: var(--text-light); line-height: 1.7;">
+        Mesurer le score EcoIndex de votre site : <strong>www.ecoindex.fr</strong><br>
+        Référentiel numérique responsable : <strong>RGESN — Mission Numérique Responsable</strong><br>
+        Green IT : <strong>www.greenit.fr</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="cta-section">
+  <div class="container" style="padding-inline: 0;">
+    <p style="font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.5; margin-bottom: 0.75rem;">Campus 112</p>
+    <h2 class="section-title" style="color: white; font-size: clamp(1.8rem, 4vw, 3rem); margin-bottom: 1rem;">Découvrir le campus</h2>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="index.html" class="btn btn-primary">Accueil</a>
+      <a href="index.html#contact" class="btn btn-secondary">Nous contacter</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div>
+      <img src="imgs/Campus 112-logos/Group 30.svg" alt="Campus 112" class="footer-logo" width="140" height="48" loading="lazy">
+      <p class="footer-desc">Un écosystème d'innovation aux portes de Reims, sur l'ancienne Base aérienne 112.</p>
+      <p class="footer-contact"><a href="https://www.campus112.org" rel="noopener">www.campus112.org</a></p>
+      <p class="footer-contact"><a href="tel:+33757818183">07 57 81 81 83</a></p>
+    </div>
+    <div>
+      <p class="footer-heading">Navigation</p>
+      <ul class="footer-nav-links" role="list">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="etudiants.html">Étudiants</a></li>
+        <li><a href="professionnels.html">Professionnels</a></li>
+        <li><a href="evenementiel.html">Événementiel</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="living-lab.html">Living Lab</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="eco-conception.html">Éco-conception</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Démarche Green IT</p>
+      <p class="footer-green">Ce site est conçu dans une logique de sobriété numérique : pages légères, images optimisées, scripts limités. Objectif : <a href="eco-conception.html">EcoIndex A</a>.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Campus 112</span>
+    <span>Conception graphique : <a href="https://etjaicrie.com" rel="noopener noreferrer" style="color: rgba(255,255,255,0.45);">etjaicrie.com</a></span>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
