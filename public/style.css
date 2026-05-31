@@ -74,7 +74,6 @@ button, input, select, textarea {
 }
 .site-nav.is-transparent .nav-links a { color: rgba(255,255,255,0.9); }
 .site-nav.is-transparent .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.12); }
-.site-nav.is-transparent .nav-logo img { filter: brightness(0) invert(1); }
 .site-nav.is-transparent .nav-cta {
   background: rgba(255,255,255,0.18) !important;
   color: var(--white) !important;
@@ -82,6 +81,10 @@ button, input, select, textarea {
 }
 .site-nav.is-transparent .nav-cta:hover { background: rgba(255,255,255,0.3) !important; }
 .site-nav.is-transparent .nav-toggle span { background: var(--white); }
+/* Logo swap : couleur → blanc quand nav transparente */
+.nav-logo .logo-blanc { display: none; }
+.site-nav.is-transparent .nav-logo .logo-couleur { display: none; }
+.site-nav.is-transparent .nav-logo .logo-blanc { display: block; }
 .nav-inner {
   display: flex;
   align-items: center;
@@ -170,8 +173,8 @@ button, input, select, textarea {
   background: linear-gradient(
     to bottom,
     rgba(0,0,0,0.0) 0%,
-    rgba(0,0,0,0.08) 50%,
-    rgba(0,0,0,0.52) 100%
+    rgba(91,45,130,0.12) 45%,
+    rgba(61,26,90,0.72) 100%
   );
 }
 
