@@ -19,6 +19,29 @@
     });
   }
 
+  /* Accordéon verbes */
+  document.querySelectorAll('.verb-item').forEach(function(item) {
+    item.addEventListener('click', function(e) {
+      e.preventDefault();
+      var entry = item.parentElement;
+      var card  = entry.querySelector('.verb-card');
+      if (!card) return;
+      var opening = !card.classList.contains('open');
+      document.querySelectorAll('.verb-card.open').forEach(function(c) {
+        c.classList.remove('open');
+        c.setAttribute('aria-hidden', 'true');
+        c.parentElement.querySelector('.verb-item').classList.remove('active');
+        c.parentElement.querySelector('.verb-item').setAttribute('aria-expanded', 'false');
+      });
+      if (opening) {
+        card.classList.add('open');
+        card.setAttribute('aria-hidden', 'false');
+        item.classList.add('active');
+        item.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
   /* Nav transparente sur le hero */
   var nav  = document.querySelector('.site-nav');
   var hero = document.querySelector('.hero');

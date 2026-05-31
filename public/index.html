@@ -53,14 +53,75 @@
   </div>
 </header>
 
-<!-- Bande des verbes -->
-<section class="verb-strip snap-section" aria-label="Les 5 usages du Campus 112">
+<!-- Bande des verbes / navigation accordéon -->
+<section class="verb-strip snap-section" id="offres" aria-label="Les 5 usages du Campus 112">
   <div class="verb-list">
-    <a href="etudiants.html" class="verb-item verb-hab">Habiter</a>
-    <a href="professionnels.html" class="verb-item verb-pro">Travailler</a>
-    <a href="culture.html" class="verb-item verb-cul">Créer</a>
-    <a href="evenementiel.html" class="verb-item verb-eve">Accueillir</a>
-    <a href="living-lab.html" class="verb-item verb-lab">Expérimenter</a>
+
+    <div class="verb-entry verb-hab">
+      <a href="etudiants.html" class="verb-item" aria-expanded="false">
+        Habiter
+        <svg class="verb-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="verb-card" aria-hidden="true">
+        <div class="verb-card-inner">
+          <p class="verb-card-desc">Studios étudiants dans un environnement paysager, à 15 min du centre de Reims. Espaces partagés, coworking, parking.</p>
+          <a href="etudiants.html" class="verb-cta">Découvrir <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="verb-entry verb-pro">
+      <a href="professionnels.html" class="verb-item" aria-expanded="false">
+        Travailler
+        <svg class="verb-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="verb-card" aria-hidden="true">
+        <div class="verb-card-inner">
+          <p class="verb-card-desc">Bureaux, ateliers, espaces de stockage et locaux modulables. 15 000 m² pour entreprises, associations, startups et acteurs de l'ESS.</p>
+          <a href="professionnels.html" class="verb-cta">Découvrir <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="verb-entry verb-cul">
+      <a href="culture.html" class="verb-item" aria-expanded="false">
+        Créer
+        <svg class="verb-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="verb-card" aria-hidden="true">
+        <div class="verb-card-inner">
+          <p class="verb-card-desc">Ateliers et résidences pour artistes, créatifs et projets culturels. Un cadre inspirant entre art, territoire et innovation.</p>
+          <a href="culture.html" class="verb-cta">Découvrir <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="verb-entry verb-eve">
+      <a href="evenementiel.html" class="verb-item" aria-expanded="false">
+        Accueillir
+        <svg class="verb-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="verb-card" aria-hidden="true">
+        <div class="verb-card-inner">
+          <p class="verb-card-desc">Espaces intérieurs et extérieurs pour séminaires, tournages, répétitions, spectacles et événements professionnels.</p>
+          <a href="evenementiel.html" class="verb-cta">Découvrir <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="verb-entry verb-lab">
+      <a href="living-lab.html" class="verb-item" aria-expanded="false">
+        Expérimenter
+        <svg class="verb-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="verb-card" aria-hidden="true">
+        <div class="verb-card-inner">
+          <p class="verb-card-desc">Un territoire d'expérimentation grandeur nature pour tester, prototyper et faire émerger des solutions liées à la ville du vivant.</p>
+          <a href="living-lab.html" class="verb-cta">Découvrir <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -126,83 +187,6 @@
           title="Survolez pour mettre en pause"
         >
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- Offres -->
-<section id="offres" class="bg-light snap-section">
-  <div class="container">
-    <p class="section-tag">Ce qu'on y fait</p>
-    <h2 class="section-title">5 offres,<br>un écosystème</h2>
-    <p class="section-lead">Chaque offre est conçue pour fonctionner de façon autonome — et s'enrichir du collectif. À Campus 112, les usages se croisent et se renforcent.</p>
-    <div class="offers-grid" role="list">
-
-      <article class="offer-card card-etudiants" role="listitem">
-        <div class="offer-card-top"></div>
-        <div class="offer-card-body">
-          <p class="offer-card-cat">Habiter</p>
-          <h3 class="offer-card-title">Étudiants</h3>
-          <p class="offer-card-text">Des studios étudiants dans un environnement paysager, à 15 minutes du centre de Reims. Espaces partagés, coworking, parking.</p>
-          <a href="etudiants.html" class="offer-card-link">
-            Découvrir
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <article class="offer-card card-pro" role="listitem">
-        <div class="offer-card-top"></div>
-        <div class="offer-card-body">
-          <p class="offer-card-cat">Travailler</p>
-          <h3 class="offer-card-title">Professionnels</h3>
-          <p class="offer-card-text">Bureaux, ateliers, espaces de stockage et locaux modulables. 15 000 m² disponibles pour entreprises, associations, startups et acteurs de l'ESS.</p>
-          <a href="professionnels.html" class="offer-card-link">
-            Découvrir
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <article class="offer-card card-events" role="listitem">
-        <div class="offer-card-top"></div>
-        <div class="offer-card-body">
-          <p class="offer-card-cat">Accueillir</p>
-          <h3 class="offer-card-title">Événementiel</h3>
-          <p class="offer-card-text">Espaces intérieurs et extérieurs pour séminaires, tournages, répétitions, spectacles, cocktails et événements professionnels.</p>
-          <a href="evenementiel.html" class="offer-card-link">
-            Découvrir
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <article class="offer-card card-culture" role="listitem">
-        <div class="offer-card-top"></div>
-        <div class="offer-card-body">
-          <p class="offer-card-cat">Créer</p>
-          <h3 class="offer-card-title">Culture</h3>
-          <p class="offer-card-text">Ateliers et résidences pour artistes, créatifs et projets culturels. Un cadre inspirant entre art, territoire et innovation.</p>
-          <a href="culture.html" class="offer-card-link">
-            Découvrir
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <article class="offer-card card-lab" role="listitem">
-        <div class="offer-card-top"></div>
-        <div class="offer-card-body">
-          <p class="offer-card-cat">Expérimenter</p>
-          <h3 class="offer-card-title">Living Lab</h3>
-          <p class="offer-card-text">Un territoire d'expérimentation grandeur nature pour tester, prototyper et faire émerger des solutions liées à la ville et à l'économie du vivant.</p>
-          <a href="living-lab.html" class="offer-card-link">
-            Découvrir
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-      </article>
-
     </div>
   </div>
 </section>

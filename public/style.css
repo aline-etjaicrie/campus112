@@ -145,7 +145,7 @@ button, input, select, textarea {
 /* --- Hero --- */
 .hero {
   position: relative;
-  min-height: 100svh;
+  min-height: 75svh;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -178,7 +178,7 @@ button, input, select, textarea {
   position: relative;
   z-index: 1;
   color: var(--white);
-  padding: 5rem var(--gap) 8rem;
+  padding: 4rem var(--gap) 4.5rem;
   max-width: var(--max);
   margin-inline: auto;
   width: 100%;
@@ -685,7 +685,7 @@ html.snap-home .snap-section {
   scroll-snap-stop: normal;
 }
 
-/* --- Bande des verbes (home) --- */
+/* --- Bande des verbes + accordéon (home) --- */
 .verb-strip {
   background: var(--white);
   padding: clamp(2.5rem, 5vw, 4rem) 0;
@@ -694,8 +694,20 @@ html.snap-home .snap-section {
 .verb-list {
   display: flex;
   flex-direction: column;
-  line-height: 1;
 }
+.verb-entry { overflow: hidden; }
+.verb-entry:nth-child(2) .verb-item { padding-left: calc(var(--gap) + clamp(1rem, 6vw, 6rem)); }
+.verb-entry:nth-child(3) .verb-item { padding-left: calc(var(--gap) + clamp(0.25rem, 2vw, 2rem)); }
+.verb-entry:nth-child(4) .verb-item { padding-left: calc(var(--gap) + clamp(2rem, 9vw, 9rem)); }
+.verb-entry:nth-child(5) .verb-item { padding-left: calc(var(--gap) + clamp(0.5rem, 4vw, 4rem)); }
+
+/* Couleurs par entrée */
+.verb-hab { color: var(--accent-etudiants); --verb-color: var(--accent-etudiants); }
+.verb-pro { color: var(--accent-pro);       --verb-color: var(--accent-pro); }
+.verb-cul { color: var(--accent-culture);   --verb-color: var(--accent-culture); }
+.verb-eve { color: var(--accent-events);    --verb-color: var(--accent-events); }
+.verb-lab { color: var(--accent-lab);       --verb-color: var(--accent-lab); }
+
 .verb-item {
   font-family: var(--font-display);
   font-size: clamp(3.2rem, 11vw, 9rem);
@@ -703,23 +715,76 @@ html.snap-home .snap-section {
   text-transform: uppercase;
   letter-spacing: -0.03em;
   line-height: 0.92;
-  display: block;
-  padding-left: var(--gap);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.1em var(--gap) 0.1em var(--gap);
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
   transition: opacity 0.15s, transform 0.2s;
   white-space: nowrap;
+  user-select: none;
 }
-.verb-item:hover { opacity: 0.75; transform: translateX(6px); }
-.verb-item:nth-child(2) { padding-left: calc(var(--gap) + clamp(1rem, 6vw, 6rem)); }
-.verb-item:nth-child(3) { padding-left: calc(var(--gap) + clamp(0.25rem, 2vw, 2rem)); }
-.verb-item:nth-child(4) { padding-left: calc(var(--gap) + clamp(2rem, 9vw, 9rem)); }
-.verb-item:nth-child(5) { padding-left: calc(var(--gap) + clamp(0.5rem, 4vw, 4rem)); }
-.verb-hab { color: var(--accent-etudiants); }
-.verb-pro { color: var(--accent-pro); }
-.verb-cul { color: var(--accent-culture); }
-.verb-eve { color: var(--accent-events); }
-.verb-lab { color: var(--accent-lab); }
+.verb-item:hover { opacity: 0.78; }
+.verb-item.active { opacity: 1; }
+
+.verb-chevron {
+  flex-shrink: 0;
+  width: clamp(1.2rem, 2.5vw, 2rem);
+  height: clamp(1.2rem, 2.5vw, 2rem);
+  opacity: 0.4;
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s;
+}
+.verb-item.active .verb-chevron { transform: rotate(180deg); opacity: 1; }
+
+/* Carte accordéon */
+.verb-card {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+  padding-left: var(--gap);
+  padding-right: var(--gap);
+}
+.verb-card.open { max-height: 160px; }
+.verb-card-inner {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  padding: 1rem 0 1.5rem;
+  border-top: 2px solid var(--verb-color, var(--violet));
+}
+.verb-card-desc {
+  font-family: var(--font-body);
+  font-size: clamp(0.85rem, 1.4vw, 1rem);
+  color: var(--text-light);
+  line-height: 1.55;
+  flex: 1;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  max-width: 52ch;
+}
+.verb-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--verb-color, var(--violet));
+  white-space: nowrap;
+  text-decoration: none;
+  transition: gap 0.2s;
+}
+.verb-cta:hover { gap: 0.85rem; }
+
+@media (max-width: 640px) {
+  .verb-card.open { max-height: 220px; }
+  .verb-card-inner { flex-direction: column; align-items: flex-start; gap: 0.75rem; padding-bottom: 1.25rem; }
+}
 
 /* --- Roue tournante --- */
 .wheel-section {
