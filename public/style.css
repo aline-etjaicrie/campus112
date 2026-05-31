@@ -65,7 +65,23 @@ button, input, select, textarea {
   background: rgba(255,255,255,0.97);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
+  transition: background 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease;
 }
+.site-nav.is-transparent {
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom-color: transparent;
+}
+.site-nav.is-transparent .nav-links a { color: rgba(255,255,255,0.9); }
+.site-nav.is-transparent .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.12); }
+.site-nav.is-transparent .nav-logo img { filter: brightness(0) invert(1); }
+.site-nav.is-transparent .nav-cta {
+  background: rgba(255,255,255,0.18) !important;
+  color: var(--white) !important;
+  border: 1px solid rgba(255,255,255,0.45) !important;
+}
+.site-nav.is-transparent .nav-cta:hover { background: rgba(255,255,255,0.3) !important; }
+.site-nav.is-transparent .nav-toggle span { background: var(--white); }
 .nav-inner {
   display: flex;
   align-items: center;
@@ -290,11 +306,11 @@ section { padding: clamp(4rem, 8vw, 7rem) 0; }
   color: var(--white);
 }
 
-/* --- Cartes offres (accueil) --- */
+/* --- Cartes offres (accueil) — bandes horizontales --- */
 .offers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
   margin-top: 3rem;
 }
 .offer-card {
@@ -302,44 +318,50 @@ section { padding: clamp(4rem, 8vw, 7rem) 0; }
   border: none;
   border-radius: var(--radius);
   overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+  transition: transform 0.18s, filter 0.18s;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 82px;
 }
 .offer-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+  transform: translateX(5px);
   filter: brightness(1.08);
 }
 .offer-card-top { display: none; }
 .offer-card-body {
-  padding: 1.75rem;
+  padding: 0 1.75rem;
   flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 3rem);
 }
 .offer-card-cat {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.7);
-  margin-bottom: 0.5rem;
+  color: rgba(255,255,255,0.65);
+  white-space: nowrap;
+  min-width: 6rem;
 }
 .offer-card-title {
   font-family: var(--font-display);
-  font-size: 1.6rem;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
   font-weight: 800;
   text-transform: uppercase;
   line-height: 1;
   color: var(--white);
-  margin-bottom: 0.75rem;
+  white-space: nowrap;
+  min-width: 10rem;
+  margin: 0;
 }
 .offer-card-text {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.85);
-  line-height: 1.6;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.5;
   flex: 1;
 }
 .offer-card-link {
@@ -347,17 +369,20 @@ section { padding: clamp(4rem, 8vw, 7rem) 0; }
   align-items: center;
   gap: 0.4rem;
   font-family: var(--font-display);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--white);
-  margin-top: 1.25rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(255,255,255,0.25);
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  border: none;
+  opacity: 0.85;
 }
+.offer-card:hover .offer-card-link { opacity: 1; }
 .offer-card-link svg { transition: transform 0.2s; }
-.offer-card:hover .offer-card-link svg { transform: translateX(4px); }
+.offer-card:hover .offer-card-link svg { transform: translateX(5px); }
 
 /* Accents par offre */
 .card-etudiants   { --accent: var(--accent-etudiants); }
@@ -913,7 +938,9 @@ html.snap-home .snap-section {
   .form-group.full { grid-column: 1; }
   .gallery-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
-  .offers-grid { grid-template-columns: 1fr; }
   .hero-title { font-size: clamp(2.4rem, 10vw, 3.5rem); }
   .contact-form { padding: 1.5rem; }
+  .offer-card-text { display: none; }
+  .offer-card-body { gap: 0.75rem; padding: 0 1rem; }
+  .offer-card-cat { min-width: 4.5rem; font-size: 0.62rem; }
 }
