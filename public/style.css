@@ -753,7 +753,7 @@ html.snap-home .snap-section {
 
 .verb-item {
   font-family: var(--font-display);
-  font-size: clamp(3.2rem, 11vw, 9rem);
+  font-size: clamp(2.8rem, 9vw, 7.5rem);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: -0.03em;
