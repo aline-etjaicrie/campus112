@@ -60,7 +60,7 @@
       line-height: 1.65;
     }
 
-    /* Badge EcoIndex */
+    /* Badge EcoIndex officiel */
     .eco-badge-wrap {
       display: flex;
       flex-direction: column;
@@ -68,44 +68,13 @@
       gap: 0.75rem;
       flex-shrink: 0;
     }
-    .eco-badge {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      background: conic-gradient(#4CAF50 0% 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 0 6px rgba(76,175,80,0.2), 0 8px 40px rgba(0,0,0,0.4);
-      position: relative;
+    .eco-badge-wrap a img {
+      box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .eco-badge::before {
-      content: '';
-      position: absolute;
-      inset: 6px;
-      border-radius: 50%;
-      background: var(--violet-dark);
-    }
-    .eco-badge-letter {
-      position: relative;
-      z-index: 1;
-      font-family: var(--font-display);
-      font-size: 5rem;
-      font-weight: 800;
-      color: #4CAF50;
-      line-height: 1;
-    }
-    .eco-badge-label {
-      position: relative;
-      z-index: 1;
-      font-family: var(--font-display);
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.55);
-      margin-top: -0.2rem;
+    .eco-badge-wrap a:hover img {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 48px rgba(0,0,0,0.5);
     }
     .eco-badge-caption {
       font-size: 0.78rem;
@@ -439,12 +408,14 @@
         <h1 class="eco-hero-title">Un site aussi<br><em>sobre</em> que<br>le projet<br>qu'il porte.</h1>
         <p class="eco-hero-lead">Campus 112 construit une ville vivante fondée sur la sobriété des ressources. Notre site web obéit au même principe : zéro superflu, maximum d'impact.</p>
       </div>
-      <div class="eco-badge-wrap" aria-label="Résultat EcoIndex A">
-        <div class="eco-badge">
-          <span class="eco-badge-letter">A</span>
-          <span class="eco-badge-label">EcoIndex</span>
-        </div>
-        <p class="eco-badge-caption">Obtenu le<br>1er juin 2026</p>
+      <div class="eco-badge-wrap" aria-label="Résultat EcoIndex A — badge officiel">
+        <a href="https://bff.ecoindex.fr/redirect/?url=https://www.campus112.org" target="_blank" rel="noopener noreferrer" aria-label="Voir le résultat EcoIndex de campus112.org">
+          <img src="https://bff.ecoindex.fr/badge/?theme=dark&url=https://www.campus112.org"
+               alt="EcoIndex A — campus112.org"
+               width="200" height="80"
+               style="border-radius: 8px;">
+        </a>
+        <p class="eco-badge-caption">Badge officiel<br>ecoindex.fr</p>
       </div>
     </div>
   </div>
