@@ -3,9 +3,409 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Démarche EcoIndex & Green IT — Campus 112 est conçu selon une logique de sobriété numérique. Objectif EcoIndex A.">
-  <title>Campus 112 — Éco-conception & Green IT</title>
+  <meta name="description" content="Campus 112 obtient EcoIndex A : 0,643 Mo, top 10 % des sites les plus sobres du web. Une cohérence entre notre projet de ville vivante et notre présence numérique.">
+  <title>Campus 112 — EcoIndex A & Sobriété numérique</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* ---- Page spécifique éco-conception ---- */
+
+    .eco-hero {
+      background: var(--violet-dark);
+      color: var(--white);
+      padding: clamp(5rem, 10vw, 9rem) 0 clamp(4rem, 7vw, 7rem);
+      position: relative;
+      overflow: hidden;
+    }
+    .eco-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 80% 50%, rgba(91,45,130,0.45) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .eco-hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: center;
+    }
+    .eco-hero-tag {
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 1.25rem;
+    }
+    .eco-hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 6vw, 5rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 0.95;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+    .eco-hero-title em {
+      font-style: normal;
+      color: #A8E6CF;
+    }
+    .eco-hero-lead {
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      color: rgba(255,255,255,0.78);
+      max-width: 52ch;
+      line-height: 1.65;
+    }
+
+    /* Badge EcoIndex */
+    .eco-badge-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      flex-shrink: 0;
+    }
+    .eco-badge {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: conic-gradient(#4CAF50 0% 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 0 6px rgba(76,175,80,0.2), 0 8px 40px rgba(0,0,0,0.4);
+      position: relative;
+    }
+    .eco-badge::before {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border-radius: 50%;
+      background: var(--violet-dark);
+    }
+    .eco-badge-letter {
+      position: relative;
+      z-index: 1;
+      font-family: var(--font-display);
+      font-size: 5rem;
+      font-weight: 800;
+      color: #4CAF50;
+      line-height: 1;
+    }
+    .eco-badge-label {
+      position: relative;
+      z-index: 1;
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-top: -0.2rem;
+    }
+    .eco-badge-caption {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    /* Stats bande */
+    .eco-stats-band {
+      background: #0f0a1a;
+      padding: 2.5rem 0;
+    }
+    .eco-stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.06);
+    }
+    .eco-stat {
+      padding: 1.75rem 2rem;
+      background: #0f0a1a;
+      text-align: center;
+    }
+    .eco-stat-num {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 800;
+      color: #A8E6CF;
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+    .eco-stat-label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      line-height: 1.3;
+    }
+
+    /* Section éditoriale */
+    .eco-edito {
+      padding: clamp(3rem, 6vw, 6rem) 0;
+    }
+    .eco-edito-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: start;
+    }
+    .eco-edito-intro {
+      font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+      font-weight: 500;
+      color: var(--violet-dark);
+      line-height: 1.6;
+      max-width: 42ch;
+      border-left: 3px solid var(--violet);
+      padding-left: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .eco-edito-body {
+      font-size: 1rem;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+    .eco-edito-body p + p {
+      margin-top: 1.25rem;
+    }
+
+    /* Principes en grille */
+    .eco-principles {
+      background: var(--violet-light);
+      padding: clamp(3rem, 6vw, 6rem) 0;
+    }
+    .eco-principles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .eco-principle-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 1.75rem;
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .eco-principle-icon {
+      font-size: 1.5rem;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+    .eco-principle-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--violet);
+    }
+    .eco-principle-desc {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+    .eco-principle-card .eco-result {
+      font-size: 0.8rem;
+      color: #4CAF50;
+      font-weight: 600;
+      margin-top: auto;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Section cohérence */
+    .eco-coherence {
+      background: var(--violet-dark);
+      color: var(--white);
+      padding: clamp(3.5rem, 7vw, 7rem) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .eco-coherence::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(91,45,130,0.5) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .eco-coherence-inner {
+      position: relative; z-index: 1;
+    }
+    .eco-coherence-quote {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 1.1;
+      color: var(--white);
+      max-width: 22ch;
+      margin-bottom: 2.5rem;
+    }
+    .eco-coherence-quote em {
+      font-style: normal;
+      color: #A8E6CF;
+    }
+    .eco-coherence-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    .eco-coherence-text {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.75;
+    }
+    .eco-coherence-text p + p {
+      margin-top: 1.25rem;
+    }
+    .eco-coherence-text strong {
+      color: var(--white);
+    }
+    .eco-promises {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .eco-promise {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem;
+      background: rgba(255,255,255,0.05);
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .eco-promise-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #A8E6CF;
+      flex-shrink: 0;
+      margin-top: 0.4rem;
+    }
+    .eco-promise-text {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.5;
+    }
+    .eco-promise-text strong {
+      color: var(--white);
+      display: block;
+      margin-bottom: 0.2rem;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* Classement */
+    .eco-ranking {
+      padding: clamp(3rem, 6vw, 6rem) 0;
+    }
+    .eco-ranking-visual {
+      margin: 3rem 0;
+      background: var(--off-white);
+      border-radius: 12px;
+      padding: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+    .eco-ranking-bar-wrap {
+      flex: 1;
+    }
+    .eco-ranking-bar-label {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      margin-bottom: 0.5rem;
+    }
+    .eco-ranking-bar-bg {
+      height: 32px;
+      background: var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+    }
+    .eco-ranking-bar-fill {
+      height: 100%;
+      width: 10.4%; /* 61717 / 590728 */
+      background: linear-gradient(90deg, #4CAF50, #8BC34A);
+      border-radius: 16px;
+    }
+    .eco-ranking-marker {
+      position: absolute;
+      left: 10.4%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: white;
+      border: 3px solid #4CAF50;
+      box-shadow: 0 2px 8px rgba(76,175,80,0.4);
+    }
+    .eco-ranking-info {
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .eco-ranking-pos {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--violet);
+      line-height: 1;
+    }
+    .eco-ranking-pos span {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      font-family: var(--font-body);
+      font-weight: 400;
+      display: block;
+      margin-top: 0.25rem;
+    }
+
+    /* Ressources */
+    .eco-resources {
+      background: var(--off-white);
+      padding: 2rem;
+      border-radius: 8px;
+      margin-top: 3rem;
+      border-left: 3px solid var(--violet);
+    }
+    .eco-resources-title {
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--violet);
+      margin-bottom: 0.75rem;
+    }
+    .eco-resources ul {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      line-height: 1.8;
+      list-style: disc;
+      padding-left: 1.2rem;
+    }
+
+    @media (max-width: 900px) {
+      .eco-hero-inner    { grid-template-columns: 1fr; }
+      .eco-badge-wrap    { display: none; }
+      .eco-stats-row     { grid-template-columns: repeat(2, 1fr); }
+      .eco-edito-grid    { grid-template-columns: 1fr; }
+      .eco-coherence-body { grid-template-columns: 1fr; }
+      .eco-ranking-visual { flex-direction: column; gap: 1.5rem; }
+    }
+  </style>
 </head>
 <body>
 
@@ -30,99 +430,236 @@
   </div>
 </nav>
 
-<div style="padding-top: 64px;"></div>
-
-<section style="padding-top: clamp(3rem, 6vw, 5rem);">
+<!-- HERO -->
+<section class="eco-hero">
   <div class="container">
-    <p class="section-tag">Green IT</p>
-    <h1 class="section-title" style="font-size: clamp(2.2rem, 5vw, 3.8rem);">Démarche EcoIndex<br>& Green IT</h1>
+    <div class="eco-hero-inner">
+      <div>
+        <p class="eco-hero-tag">Sobriété numérique — Green IT</p>
+        <h1 class="eco-hero-title">Un site aussi<br><em>sobre</em> que<br>le projet<br>qu'il porte.</h1>
+        <p class="eco-hero-lead">Campus 112 construit une ville vivante fondée sur la sobriété des ressources. Notre site web obéit au même principe : zéro superflu, maximum d'impact.</p>
+      </div>
+      <div class="eco-badge-wrap" aria-label="Résultat EcoIndex A">
+        <div class="eco-badge">
+          <span class="eco-badge-letter">A</span>
+          <span class="eco-badge-label">EcoIndex</span>
+        </div>
+        <p class="eco-badge-caption">Obtenu le<br>1er juin 2026</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BANDE -->
+<div class="eco-stats-band" role="region" aria-label="Résultats EcoIndex">
+  <div class="container">
+    <div class="eco-stats-row">
+      <div class="eco-stat">
+        <p class="eco-stat-num">A</p>
+        <p class="eco-stat-label">Grade EcoIndex</p>
+      </div>
+      <div class="eco-stat">
+        <p class="eco-stat-num">0,643 Mo</p>
+        <p class="eco-stat-label">Poids de la page</p>
+      </div>
+      <div class="eco-stat">
+        <p class="eco-stat-num">61 717<sup style="font-size:0.5em">e</sup></p>
+        <p class="eco-stat-label">Sur 590 728 sites</p>
+      </div>
+      <div class="eco-stat">
+        <p class="eco-stat-num">12</p>
+        <p class="eco-stat-label">Requêtes serveur</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ÉDITO -->
+<section class="eco-edito">
+  <div class="container">
+    <div class="eco-edito-grid">
+      <div>
+        <p class="section-tag">Cohérence</p>
+        <h2 class="section-title">Ce que le score<br>dit du projet</h2>
+        <div class="accent-bar"></div>
+        <p class="eco-edito-intro">Construire une ville régénérative en hébergeant un site qui gaspille les ressources numériques, c'eût été une contradiction. Ce n'est pas le cas.</p>
+      </div>
+      <div class="eco-edito-body">
+        <p>Le numérique représente aujourd'hui 4 % des émissions mondiales de gaz à effet de serre — et ce chiffre double tous les quatre ans. Un site web ordinaire pèse en moyenne 2,4 Mo et déclenche 78 requêtes serveur à chaque visite. Le nôtre pèse 0,643 Mo et n'en déclenche que 12.</p>
+        <p>Ce n'est pas un détail technique. C'est une <strong>posture</strong> : la même qui guide chaque décision sur le campus physique. Utiliser exactement ce qu'on a besoin. Pas plus. Et faire en sorte que ça fonctionne mieux.</p>
+        <p>EcoIndex classe les sites du web de A (plus sobre) à G (plus énergivore). Nous sommes dans le <strong>top 10 % des sites les plus légers du web français</strong>, parmi les 61 717 premiers sur 590 728 mesurés.</p>
+        <p>Le campus porte 17 filières de recherche autour du vivant, de l'énergie, de l'eau, des matériaux. Il serait paradoxal que sa vitrine numérique consomme comme une autoroute. Elle consomme comme un sentier.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPES TECHNIQUES -->
+<section class="eco-principles">
+  <div class="container">
+    <p class="section-tag">Architecture technique</p>
+    <h2 class="section-title">Ce qu'on a fait,<br>concrètement</h2>
     <div class="accent-bar"></div>
-    <p class="section-lead">Le site Campus 112 est conçu selon une logique de sobriété numérique : limiter le poids des pages, réduire les scripts, optimiser les images, simplifier les parcours et privilégier des composants utiles, lisibles et durables.</p>
+    <div class="eco-principles-grid">
 
-    <dl class="score-box">
-      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem;">
-        <div>
-          <dt>Objectif EcoIndex</dt>
-          <dd>Grade A</dd>
-        </div>
-        <div>
-          <dt>Dernière vérification</dt>
-          <dd style="font-size: 1rem; opacity: 0.7;">À compléter</dd>
-        </div>
-        <div>
-          <dt>Score obtenu</dt>
-          <dd style="font-size: 1rem; opacity: 0.7;">À compléter</dd>
-        </div>
-        <div>
-          <dt>Poids moyen des pages</dt>
-          <dd style="font-size: 1rem; opacity: 0.7;">À compléter</dd>
-        </div>
+      <div class="eco-principle-card">
+        <p class="eco-principle-icon">📄</p>
+        <p class="eco-principle-title">HTML statique</p>
+        <p class="eco-principle-desc">Aucun framework JavaScript, aucun CMS côté client. Le site se réduit à du HTML, un CSS partagé et 40 lignes de JS pour le menu mobile.</p>
+        <p class="eco-result">→ Zéro bundle, temps de chargement minimal</p>
       </div>
-    </dl>
+
+      <div class="eco-principle-card">
+        <p class="eco-principle-icon">🖼</p>
+        <p class="eco-principle-title">Images WebP optimisées</p>
+        <p class="eco-principle-desc">Toutes les images converties en WebP, redimensionnées à la taille réelle d'affichage. La boussole des 17 filières est passée de 3,3 Mo à 166 Ko.</p>
+        <p class="eco-result">→ −85 % de poids image moyen</p>
+      </div>
+
+      <div class="eco-principle-card">
+        <p class="eco-principle-icon">🔠</p>
+        <p class="eco-principle-title">Polices auto-hébergées</p>
+        <p class="eco-principle-desc">Barlow Condensed hébergé localement en subset latin (45 Ko). Le corps de texte utilise la police système de l'appareil : zéro requête externe.</p>
+        <p class="eco-result">→ −3 requêtes externes, −200 Ko</p>
+      </div>
+
+      <div class="eco-principle-card">
+        <p class="eco-principle-icon">⏱</p>
+        <p class="eco-principle-title">Lazy loading</p>
+        <p class="eco-principle-desc">Les images hors écran ne se chargent qu'au moment où l'utilisateur y arrive. La page initiale ne paie que ce qu'elle montre.</p>
+        <p class="eco-result">→ Seules 12 requêtes au chargement</p>
+      </div>
+
+      <div class="eco-principle-card">
+        <p class="eco-principle-icon">🚫</p>
+        <p class="eco-principle-title">Zéro tracker</p>
+        <p class="eco-principle-desc">Aucun Google Analytics, aucun pixel publicitaire, aucun cookie tiers. Les données des visiteurs ne quittent pas leur navigateur.</p>
+        <p class="eco-result">→ Respect vie privée + sobriété</p>
+      </div>
+
+      <div class="eco-principle-card">
+        <p class="eco-principle-icon">📐</p>
+        <p class="eco-principle-title">DOM sobre</p>
+        <p class="eco-principle-desc">248 éléments dans le DOM, contre une médiane web de 693. Moins d'éléments à calculer, afficher, animer — moins d'énergie consommée à chaque visite.</p>
+        <p class="eco-result">→ 248 éléments / cible 600</p>
+      </div>
+
+      <div class="eco-principle-card">
+        <p class="eco-principle-icon">♿</p>
+        <p class="eco-principle-title">Accessibilité</p>
+        <p class="eco-principle-desc">Balises sémantiques, attributs ARIA, contrastes WCAG AA, navigation clavier fonctionnelle. Un site sobre n'est pas un site dégradé.</p>
+        <p class="eco-result">→ Inclusif par conception</p>
+      </div>
+
+      <div class="eco-principle-card">
+        <p class="eco-principle-icon">🌐</p>
+        <p class="eco-principle-title">Déploiement statique</p>
+        <p class="eco-principle-desc">Hébergé sur Netlify CDN, sans serveur applicatif, sans base de données. Chaque page est un fichier HTML servi directement depuis un CDN proche de l'utilisateur.</p>
+        <p class="eco-result">→ Empreinte serveur minimale</p>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<section class="bg-light" style="padding-top: 3rem;">
+<!-- COHÉRENCE PROJET/SITE -->
+<section class="eco-coherence">
   <div class="container">
-    <p class="section-tag">Les principes</p>
-    <h2 class="section-title">Ce que nous<br>faisons concrètement</h2>
-    <div class="eco-grid">
-      <div class="eco-card">
-        <p class="eco-card-title">Design sobre</p>
-        <p>Pas d'animation lourde, pas de carrousel, pas de fonctionnalité gadget. Chaque élément justifie sa présence.</p>
-      </div>
-      <div class="eco-card">
-        <p class="eco-card-title">Pages légères</p>
-        <p>HTML statique, un seul fichier CSS partagé, un seul fichier JS minimal. Pas de framework lourd.</p>
-      </div>
-      <div class="eco-card">
-        <p class="eco-card-title">Images optimisées</p>
-        <p>Dimensions adaptées à l'usage, lazy loading sur toutes les images hors écran, formats modernes recommandés (WebP/AVIF).</p>
-      </div>
-      <div class="eco-card">
-        <p class="eco-card-title">Polices limitées</p>
-        <p>Deux familles typographiques (Barlow Condensed + Inter), deux graisses chacune, chargées depuis Google Fonts avec <code>display=swap</code>.</p>
-      </div>
-      <div class="eco-card">
-        <p class="eco-card-title">Scripts limités</p>
-        <p>Un seul fichier JS de quelques lignes (navigation mobile). Aucun tracker, aucune bibliothèque externe.</p>
-      </div>
-      <div class="eco-card">
-        <p class="eco-card-title">Navigation claire</p>
-        <p>Architecture simple : 7 pages, navigation directe, formulaires adaptés par offre. Pas de redirection inutile.</p>
-      </div>
-      <div class="eco-card">
-        <p class="eco-card-title">Icônes SVG inline</p>
-        <p>Pictogrammes intégrés en SVG inline. Aucune librairie d'icônes externe chargée.</p>
-      </div>
-      <div class="eco-card">
-        <p class="eco-card-title">Accessibilité</p>
-        <p>Balises sémantiques, attributs ARIA, contrastes conformes WCAG AA, navigation clavier fonctionnelle.</p>
+    <div class="eco-coherence-inner">
+      <p class="eco-coherence-quote">La sobriété<br>n'est pas une<br><em>contrainte</em>,<br>c'est un choix.</p>
+      <div class="eco-coherence-body">
+        <div class="eco-coherence-text">
+          <p>Campus 112 est un territoire de 65 hectares engagé dans la transition écologique. Son Living Lab déploie 17 filières de recherche appliquée — énergie, eau, biodiversité, mobilité douce, économie circulaire — dans des bâtiments réhabilités plutôt que construits.</p>
+          <p><strong>Ce choix de la réhabilitation plutôt que de la démolition-reconstruction</strong> est le même que nous appliquons ici : partir de l'existant, l'optimiser, ne consommer que ce qui est nécessaire.</p>
+          <p>Un site web sobre n'est pas un site appauvri. C'est un site où chaque Ko a une raison d'être. Où le visiteur charge ce dont il a besoin, sans payer pour le reste. Où les serveurs tournent moins longtemps, les data centers chauffent moins.</p>
+          <p><strong>C'est à petite échelle l'idée que nous défendons à grande échelle</strong> : qu'on peut faire mieux avec moins, si on y pense dès la conception.</p>
+        </div>
+        <div class="eco-promises">
+          <div class="eco-promise">
+            <div class="eco-promise-dot"></div>
+            <div class="eco-promise-text">
+              <strong>Bâti</strong>
+              Réhabilitation de ~40 bâtiments existants plutôt que construction neuve.
+            </div>
+          </div>
+          <div class="eco-promise">
+            <div class="eco-promise-dot"></div>
+            <div class="eco-promise-text">
+              <strong>Énergie</strong>
+              Filière Living Lab dédiée aux énergies renouvelables et à la sobriété énergétique.
+            </div>
+          </div>
+          <div class="eco-promise">
+            <div class="eco-promise-dot"></div>
+            <div class="eco-promise-text">
+              <strong>Numérique</strong>
+              Site web EcoIndex A : top 10 % des sites les plus sobres du web.
+            </div>
+          </div>
+          <div class="eco-promise">
+            <div class="eco-promise-dot"></div>
+            <div class="eco-promise-text">
+              <strong>Prochaine étape</strong>
+              Mesurer et publier l'empreinte carbone annuelle du site. Documenter l'hébergement sur énergie verte.
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section>
+<!-- CLASSEMENT -->
+<section class="eco-ranking">
   <div class="container">
-    <p class="section-tag">Actions en cours</p>
-    <h2 class="section-title">Amélioration<br>continue</h2>
-    <p class="section-lead">L'éco-conception est un processus itératif. Voici les prochains points à traiter.</p>
-    <div class="features" style="max-width: 700px;">
-      <div class="feature-item"><div class="feature-bullet"></div><span>Convertir les images JPEG/PNG en WebP ou AVIF</span></div>
-      <div class="feature-item"><div class="feature-bullet"></div><span>Vérifier et documenter le score EcoIndex après déploiement</span></div>
-      <div class="feature-item"><div class="feature-bullet"></div><span>Documenter l'hébergement (localisation, énergie renouvelable)</span></div>
-      <div class="feature-item"><div class="feature-bullet"></div><span>Sous-setter les polices Google Fonts pour ne charger que les caractères utilisés</span></div>
-      <div class="feature-item"><div class="feature-bullet"></div><span>Ajouter un cache HTTP long sur les assets statiques</span></div>
-      <div class="feature-item"><div class="feature-bullet"></div><span>Mesurer le bilan carbone annuel du site</span></div>
+    <p class="section-tag">Mesure indépendante</p>
+    <h2 class="section-title">Notre position<br>dans le classement</h2>
+    <div class="accent-bar"></div>
+    <p class="section-lead">EcoIndex.fr analyse et classe les sites web selon trois critères : poids de la page, complexité du DOM, nombre de requêtes. Nous sommes mesurés, classés, vérifiables.</p>
+
+    <div class="eco-ranking-visual">
+      <div class="eco-ranking-bar-wrap">
+        <p class="eco-ranking-bar-label">Position parmi les 590 728 sites mesurés</p>
+        <div class="eco-ranking-bar-bg" role="progressbar" aria-valuenow="61717" aria-valuemin="1" aria-valuemax="590728" aria-label="61 717e sur 590 728">
+          <div class="eco-ranking-bar-fill"></div>
+          <div class="eco-ranking-marker"></div>
+        </div>
+        <div style="display:flex; justify-content:space-between; margin-top: 0.5rem; font-size: 0.75rem; color: var(--text-light);">
+          <span>Plus sobre →</span>
+          <span>← Plus énergivore</span>
+        </div>
+      </div>
+      <div class="eco-ranking-info">
+        <p class="eco-ranking-pos">61 717<span>sur 590 728</span></p>
+      </div>
     </div>
-    <div style="margin-top: 3rem; padding: 2rem; background: var(--violet-light); border-radius: var(--radius); max-width: 700px;">
-      <p style="font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--violet); margin-bottom: 0.75rem;">Ressources</p>
-      <p style="font-size: 0.9rem; color: var(--text-light); line-height: 1.7;">
-        Mesurer le score EcoIndex de votre site : <strong>www.ecoindex.fr</strong><br>
-        Référentiel numérique responsable : <strong>RGESN — Mission Numérique Responsable</strong><br>
-        Green IT : <strong>www.greenit.fr</strong>
-      </p>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-top: 2rem;">
+      <div style="padding: 1.5rem; background: var(--white); text-align: center;">
+        <p style="font-family: var(--font-display); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.5rem;">Poids</p>
+        <p style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: #4CAF50; line-height: 1;">0,643 Mo</p>
+        <p style="font-size: 0.75rem; color: var(--text-light); margin-top: 0.3rem;">Cible : 1,024 Mo ✓</p>
+      </div>
+      <div style="padding: 1.5rem; background: var(--white); text-align: center;">
+        <p style="font-family: var(--font-display); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.5rem;">DOM</p>
+        <p style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: #4CAF50; line-height: 1;">248 él.</p>
+        <p style="font-size: 0.75rem; color: var(--text-light); margin-top: 0.3rem;">Cible : 600 ✓</p>
+      </div>
+      <div style="padding: 1.5rem; background: var(--white); text-align: center;">
+        <p style="font-family: var(--font-display); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.5rem;">Requêtes</p>
+        <p style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: #4CAF50; line-height: 1;">12</p>
+        <p style="font-size: 0.75rem; color: var(--text-light); margin-top: 0.3rem;">Cible : 40 ✓</p>
+      </div>
+    </div>
+
+    <div class="eco-resources">
+      <p class="eco-resources-title">Ressources & références</p>
+      <ul>
+        <li>Mesurer votre site : <strong>www.ecoindex.fr</strong></li>
+        <li>Référentiel Général d'Écoconception des Services Numériques : <strong>RGESN — Mission Numérique Responsable</strong></li>
+        <li>Collectif numérique responsable : <strong>www.greenit.fr</strong></li>
+        <li>Numérique & environnement : <strong>www.arcep.fr/carbone-numerique</strong></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -130,9 +667,10 @@
 <div class="cta-section">
   <div class="container" style="padding-inline: 0;">
     <p style="font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.5; margin-bottom: 0.75rem;">Campus 112</p>
-    <h2 class="section-title" style="color: white; font-size: clamp(1.8rem, 4vw, 3rem); margin-bottom: 1rem;">Découvrir le campus</h2>
+    <h2 class="section-title" style="color: white; font-size: clamp(1.8rem, 4vw, 3rem); margin-bottom: 1rem;">Voir le projet</h2>
     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-      <a href="index.html" class="btn btn-primary">Accueil</a>
+      <a href="a-propos.html" class="btn btn-primary">Notre vision</a>
+      <a href="living-lab.html" class="btn btn-secondary">Le Living Lab</a>
       <a href="index.html#contact" class="btn btn-secondary">Nous contacter</a>
     </div>
   </div>
@@ -162,7 +700,7 @@
     </div>
     <div>
       <p class="footer-heading">Démarche Green IT</p>
-      <p class="footer-green">Ce site est conçu dans une logique de sobriété numérique : pages légères, images optimisées, scripts limités. Objectif : <a href="eco-conception.html">EcoIndex A</a>.</p>
+      <p class="footer-green">Ce site obtient l'<strong>EcoIndex A</strong> — top 10 % des sites les plus sobres du web. <a href="eco-conception.html">En savoir plus →</a></p>
     </div>
   </div>
   <div class="footer-bottom">

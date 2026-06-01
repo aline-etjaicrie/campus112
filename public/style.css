@@ -363,12 +363,21 @@ section { padding: clamp(4rem, 8vw, 7rem) 0; }
   color: var(--white);
 }
 .bg-violet .section-title { color: var(--white); }
-.bg-violet .section-lead { color: rgba(255,255,255,0.8); }
+.bg-violet .section-lead  { color: rgba(255,255,255,0.8); }
+.bg-violet .section-tag   { color: rgba(255,255,255,0.6); opacity: 1; }
+.bg-violet .accent-bar    { background: rgba(255,255,255,0.35); }
 .bg-light { background: var(--violet-light); }
 .bg-dark {
   background: var(--violet-dark);
   color: var(--white);
 }
+.bg-dark .section-title { color: var(--white); }
+.bg-dark .section-tag   { color: rgba(255,255,255,0.55); opacity: 1; }
+.bg-dark .section-lead  { color: rgba(255,255,255,0.78); }
+.bg-dark .accent-bar    { background: rgba(255,255,255,0.3); }
+.bg-dark .feature-bullet { background: rgba(255,255,255,0.5); }
+.bg-dark .feature-item  { border-bottom-color: rgba(255,255,255,0.12); }
+.bg-dark .feature-item span { color: rgba(255,255,255,0.82); }
 
 /* --- Cartes offres (accueil) — bandes horizontales --- */
 .offers-grid {
