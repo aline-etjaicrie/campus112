@@ -1008,6 +1008,253 @@ html.snap-home .snap-section {
   }
 }
 
+/* --- Vision section home --- */
+.vision-section {
+  background: var(--violet-dark);
+  color: var(--white);
+  padding: clamp(4rem, 8vw, 7rem) 0;
+}
+.vision-section .section-tag { color: rgba(255,255,255,0.5); }
+.vision-section .section-title { color: var(--white); font-size: clamp(2rem, 4.5vw, 3.8rem); }
+.vision-section .section-lead { color: rgba(255,255,255,0.78); max-width: 60ch; }
+.vision-section .feature-item { border-bottom-color: rgba(255,255,255,0.15); }
+.vision-section .feature-bullet { background: rgba(255,255,255,0.5); }
+.vision-section .feature-item span { color: rgba(255,255,255,0.85); font-size: 0.95rem; }
+.vision-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: start;
+}
+.vision-enjeux-label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .vision-layout { grid-template-columns: 1fr; }
+}
+.vision-stats {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+.vision-stats .stat-num { color: var(--white); }
+.vision-stats .stat-label { color: rgba(255,255,255,0.55); }
+
+/* --- Pricing box --- */
+.pricing-box {
+  background: var(--violet-light);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin: 2.5rem 0;
+}
+.pricing-box-title {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--violet);
+  opacity: 0.7;
+  margin-bottom: 1.25rem;
+}
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.pricing-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  border-left: 3px solid var(--page-accent, var(--violet));
+}
+.pricing-card-type {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+.pricing-card-price {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--page-accent, var(--violet));
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+.pricing-card-detail {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  line-height: 1.55;
+}
+.pricing-note {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+/* --- Gouvernance cards --- */
+.gouvernance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.gouvernance-card {
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  border-top: 4px solid var(--g-accent, var(--violet));
+  background: var(--violet-light);
+}
+.gouvernance-card-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--g-accent, var(--violet));
+  margin-bottom: 0.25rem;
+}
+.gouvernance-card-type {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+.gouvernance-card p { font-size: 0.9rem; color: var(--text); line-height: 1.6; }
+@media (max-width: 768px) {
+  .gouvernance-grid { grid-template-columns: 1fr; }
+}
+
+/* --- Timeline feuille de route --- */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 3rem;
+  position: relative;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5.5rem;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: rgba(255,255,255,0.2);
+}
+.timeline-item {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: 2rem;
+  padding: 0 0 2.5rem 0;
+  position: relative;
+}
+.timeline-year {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--white);
+  padding-top: 0.15rem;
+  text-align: right;
+}
+.timeline-dot {
+  position: absolute;
+  left: calc(6rem + 2rem - 6px);
+  top: 0.45rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--white);
+  z-index: 1;
+}
+.timeline-content {
+  padding-left: 1.5rem;
+}
+.timeline-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+}
+.timeline-desc { font-size: 0.9rem; color: rgba(255,255,255,0.72); line-height: 1.65; }
+@media (max-width: 640px) {
+  .timeline::before { left: 3rem; }
+  .timeline-item { grid-template-columns: 3.5rem 1fr; gap: 1rem; }
+  .timeline-dot { left: calc(3.5rem + 1rem - 6px); }
+  .timeline-year { font-size: 1.1rem; }
+}
+
+/* --- Rejoindre cards --- */
+.rejoindre-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+.rejoindre-card {
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.rejoindre-card:hover { border-color: var(--violet); transform: translateY(-2px); }
+.rejoindre-card-icon {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--violet);
+  opacity: 0.15;
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+.rejoindre-card-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--violet);
+  margin-bottom: 0.5rem;
+}
+.rejoindre-card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
+
+/* --- LL thématiques tags --- */
+.thematiques-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+.thematique-tag {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border-radius: 2px;
+  background: var(--violet-light);
+  color: var(--violet);
+  border: 1px solid var(--border);
+}
+
+/* --- Page about hero gradient --- */
+.page-about .hero-bg::after {
+  background: linear-gradient(160deg, rgba(91,45,130,0.78) 0%, rgba(61,26,90,0.92) 100%);
+}
+
 /* --- Print --- */
 @media print {
   .site-nav, .wheel-img, .form-section, .cta-section, .nav-toggle { display: none !important; }
